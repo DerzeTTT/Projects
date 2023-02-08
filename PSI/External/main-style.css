@@ -20,3 +20,19 @@
     height: 55px;
 
 }
+
+.extend-profile {
+
+    height: 15px;
+    width: 15px;
+
+}
+
+.profile-picture {
+
+    height: 45px;
+    width: 45px;
+
+    border-radius: 100%;
+
+}
