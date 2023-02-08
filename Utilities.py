@@ -73,3 +73,4 @@ def Convert(New_Type, Val):
                 Total -= Current;
 
          return Total;
+#lol
