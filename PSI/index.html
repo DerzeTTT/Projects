@@ -4,7 +4,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="External/main-style.css">
+
+    <link rel="stylesheet" href="External/temp.css"> <!-- Temporary sizes for ease of work -->
+    <link rel="stylesheet" href="External/main.css"> <!-- Main changes -->
+    <link rel="stylesheet" href="https://necolas.github.io/normalize.css/7.0.0/normalize.css"/> <!-- Normalize CSS -->
+
     <title>PSI Projekt</title>
 </head>
 <body>
@@ -73,24 +77,40 @@
 
     <nav class="side-bar">
 
-        <button class="side-bar-opt">
-            <img src="Images/Magnifier.svg" alt="" class="btn-logo">
-        </button>
-        <button class="side-bar-opt">
-            <img src="Images/Hand.svg" alt="" class="btn-logo">
-        </button>
-        <button class="side-bar-opt">
-            <img src="Images/Wallet.svg" alt="" class="btn-logo">
-        </button>
-        <button class="side-bar-opt">
-            <img src="Images/Like.svg" alt="" class="btn-logo">
-        </button>
-        <button class="side-bar-opt">
-            <img src="Images/Info.svg" alt="" class="btn-logo">
-        </button>
-        <button class="side-bar-opt">
-            <img src="Images/Settings.svg" alt="" class="btn-logo">
-        </button>
+        <div class="buttons-container" id="top-margin">
+
+            <button class="side-bar-opt">
+                
+                <div class="btn-text">Find</div>
+
+                <img src="Images/Magnifier.svg" alt="" class="btn-logo">
+            </button>
+
+            <button class="side-bar-opt">
+                <img src="Images/Hand.svg" alt="" class="btn-logo">
+            </button>
+
+            <button class="side-bar-opt">
+                <img src="Images/Wallet.svg" alt="" class="btn-logo">
+            </button>
+
+        </div>
+
+        <div class="buttons-container" id="bottom-margin">
+
+            <button class="side-bar-opt">
+                <img src="Images/Like.svg" alt="" class="btn-logo">
+            </button>
+
+            <button class="side-bar-opt">
+                <img src="Images/Info.svg" alt="" class="btn-logo">
+            </button>
+
+            <button class="side-bar-opt">
+                <img src="Images/Settings.svg" alt="" class="btn-logo">
+            </button>
+
+        </div>
 
     </nav>
 
