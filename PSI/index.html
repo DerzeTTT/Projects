@@ -4,10 +4,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <link rel="stylesheet" href="External/temp.css"> <!-- Temporary sizes for ease of work -->
+    
     <link rel="stylesheet" href="External/main.css"> <!-- Main changes -->
     <link rel="stylesheet" href="https://necolas.github.io/normalize.css/7.0.0/normalize.css"/> <!-- Normalize CSS -->
+
+    <script src="External/handler.js"></script> <!-- Main JS file -->
 
     <title>PSI Projekt</title>
 </head>
@@ -15,14 +16,14 @@
     
     <header class="top-bar">
 
-        <div class="profile">
+        <button class="profile">
 
             <img src="Images/Profile-Picture.jpg" alt="" class="profile-picture">
+            <span id="full-name">Jake Daniels</span>
+
             <img src="Images/Arrow_Down.svg" alt="" class="extend-profile">
 
-            <h1 class="full-name">Jake Daniels</h1>
-
-        </div>
+        </button>
 
         <img src="Images/Aperture.svg" alt="" class="web-logo">
 
@@ -30,37 +31,65 @@
 
     <div class="content">
 
-        <div class="title">Welcome to Pulse, Jake.</div>
+        <span id="welcome"></span>
 
-        <div class="Search">
+        <div class="search">
 
-            <h1 class="title">What do you need help with?</h1> 
+            <span class="title">What do you need help with?</span> 
             
-            <img src="Images/Magnifier.svg" alt="" class="search-logo">
             <input type="text" placeholder="Ex. smart contracts" class="search-bar">
+            <img src="Images/Input-Icon.svg" alt="" class="search-logo">
 
         </div>
 
         <div class="categories">
 
-            <h1 class="title">Please select a category</h1>
+            <span class="title">Please select a category</span>
             <div class="grid">
 
-                <button class="category">
-                    <img src="" alt="" class="category-icon">
-                    <h1 class="category-title">Technical services</h1>
+                <button class="category" id="Cat1" onclick="Set_Check('Cat1')">
+
+                    <div class="checkmark">
+
+                        <img src="Images/Checkmark.svg" alt="" class="check-icon">
+
+                    </div>
+
+                    <img src="Images/Cat1.png" alt="" class="category-icon">
+                    <span class="category-title">Technical services</span>
                 </button>
-                <button class="category">
-                    <img src="" alt="" class="category-icon">
-                    <h1 class="category-title">Marketing services</h1>
+                <button class="category" id="Cat2" onclick="Set_Check('Cat2')">
+
+                    <div class="checkmark">
+
+                        <img src="Images/Checkmark.svg" alt="" class="check-icon">
+
+                    </div>
+
+                    <img src="Images/Cat2.png" alt="" class="category-icon">
+                    <span class="category-title">Marketing services</span>
                 </button>
-                <button class="category">
-                    <img src="" alt="" class="category-icon">
-                    <h1 class="category-title">Legal services</h1>
+                <button class="category" id="Cat3" onclick="Set_Check('Cat3')">
+
+                    <div class="checkmark">
+
+                        <img src="Images/Checkmark.svg" alt="" class="check-icon">
+
+                    </div>
+
+                    <img src="Images/Cat3.png" alt="" class="category-icon">
+                    <span class="category-title">Legal services</span>
                 </button>
-                <button class="category">
-                    <img src="" alt="" class="category-icon">
-                    <h1 class="category-title">Advisory services</h1>
+                <button class="category" id="Cat4" onclick="Set_Check('Cat4')">
+
+                    <div class="checkmark">
+
+                        <img src="Images/Checkmark.svg" alt="" class="check-icon">
+
+                    </div>
+
+                    <img src="Images/Cat4.png" alt="" class="category-icon">
+                    <span class="category-title">Advisory services</span>
                 </button>
 
             </div>
@@ -80,18 +109,27 @@
         <div class="buttons-container" id="top-margin">
 
             <button class="side-bar-opt">
-                
-                <div class="btn-text">Find</div>
 
                 <img src="Images/Magnifier.svg" alt="" class="btn-logo">
+
+                <span class="btn-text">Find</span>
+
             </button>
 
             <button class="side-bar-opt">
+
                 <img src="Images/Hand.svg" alt="" class="btn-logo">
+
+                <span class="btn-text">My intents</span>
+
             </button>
 
             <button class="side-bar-opt">
+
                 <img src="Images/Wallet.svg" alt="" class="btn-logo">
+
+                <span class="btn-text">Wallet</span>
+
             </button>
 
         </div>
@@ -99,15 +137,27 @@
         <div class="buttons-container" id="bottom-margin">
 
             <button class="side-bar-opt">
+
                 <img src="Images/Like.svg" alt="" class="btn-logo">
+
+                <span class="btn-text">Give feedback</span>
+
             </button>
 
             <button class="side-bar-opt">
+
                 <img src="Images/Info.svg" alt="" class="btn-logo">
+
+                <span class="btn-text">Learn more</span>
+
             </button>
 
             <button class="side-bar-opt">
+
                 <img src="Images/Settings.svg" alt="" class="btn-logo">
+
+                <span class="btn-text">Settings</span>
+
             </button>
 
         </div>

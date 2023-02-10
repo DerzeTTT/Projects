@@ -1,9 +1,14 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
 
 :root {
 
-    --bg-color: rgb(234, 240, 243);
-    --default-font: 'Roboto', sans-serif;
+    --bg-color: rgb(241, 244, 249);
+    --default-font: 'Open Sans', sans-serif;
+
+    --content-font: 'Roboto', sans-serif;
+
+    --full-name: Jake Daniels;
 
 }
 
@@ -11,6 +16,8 @@ body {
 
     background-color: var(--bg-color);
     font-family: var(--default-font);
+
+    overflow: hidden;
 
 }
 
@@ -25,15 +32,17 @@ body {
 
 .web-logo {
 
-    width: 50px;
-    height: 50px;
+    width: 2.7%;
+    height: 2.7%;
 
-    margin-left: 31px;
-    margin-top: 30px;
+    margin-left: 1.4vw;
+    margin-top: 1.3vw;
 
     opacity: .7;
 
-    animation: logo-rotation 1.7s infinite ease-in-out;
+    z-index: 2;
+
+    animation: logo-rotation 20s infinite linear;
 
 }
 
@@ -46,26 +55,9 @@ body {
     }
 }
 
-.profile-picture {
-
-    height: 55px;
-    width: 55px;
-
-    border-radius: 100%;
-
-    object-fit: cover;
-
-}
-
-.content {
-
-    padding-left: 27%;
-
-}
-
 .side-bar {
 
-    width: 19vw;
+    width: 16vw;
     height: 100%;
 
     top: 0;
@@ -79,21 +71,21 @@ body {
 
     background-color: rgb(21, 28, 83);
 
-    z-index: -1;
+    z-index: 1;
 
 }
 
 .side-bar button {
 
-    width: 80%;
-    height: 53px;
+    width: 13vw;
+    height: 5vh;
 
-    border-radius: 5px;
+    border-radius: .2vw;
 
-    margin-top: 25px;
-    margin-left: 9%;
+    margin-top: 3%;
+    margin-left: 7%;
 
-    background-color: rgb(72,98,243);
+    background-color: transparent;
     background-repeat: no-repeat;
 
     border: none;
@@ -104,10 +96,24 @@ body {
 
     display: flex;
 
-    flex-direction: row-reverse;
-
-    justify-content: space-between;
     align-items: center;
+    justify-content: center;
+
+    transition: 0.18s;
+
+}
+
+.side-bar button:hover {
+
+    background-color: rgb(72,98,243);
+    box-shadow: .17vw .17vw .34vw;
+
+}
+
+.side-bar button:active {
+
+    width: 12.8vw;
+    height: 4.7vh;
 
 }
 
@@ -115,24 +121,27 @@ body {
 
     color: rgb(255,255,255);
 
+    width: 1vw;
+    
+    white-space: nowrap;
+
     font-weight: 400;
-    letter-spacing: .7px;
-
+    letter-spacing: .005vw;
+    
     opacity: 0.85;
+    margin-right: 65%;
 
-    font-size: 19.5px;
-
-    padding-right: 60%;
+    font-size: .95vw;
 
 }
 
 .btn-logo {
 
-    width: 63%;
-    height: 63%;
+    width: 68%;
+    height: 68%;
 
-    padding-left: 18px;
-    opacity: 0.7;
+    padding-left: .24vw;
+    opacity: 0.75;
 
     filter: brightness(0) invert(1);
 
@@ -140,12 +149,358 @@ body {
 
 #top-margin {
 
-    margin-top: 8vh;
+    margin-top: 9.5vh;
 
 }
 
 #bottom-margin {
 
-    margin-bottom: 5vh;
+    margin-bottom: 3vh;
+
+}
+
+/*Top bar*/
+
+.profile {
+
+    display: flex;
+
+    align-items: center;
+    justify-content: space-evenly;
+
+    background-color: rgb(233, 236, 241);
+
+    margin: 1%;
+
+    width: 11vw;
+    height: 6.5vh;
+
+    background-repeat: no-repeat;
+
+    border: none;
+    cursor: pointer;
+
+    overflow: hidden;
+    outline: none;
+
+    border-radius: .24vw;
+
+    transition: .2s;
+
+}
+
+.profile:hover {
+
+    background-color: rgb(208, 211, 216);
+
+}
+
+.profile-picture {
+
+    width: 2.2vw;
+    height: 2.2vw;
+
+    object-fit: cover;
+
+    border-radius: 100%;
+    border: .12vw solid rgb(199, 199, 199);
+
+}
+
+#full-name {
+
+    font-size: .95vw;
+
+    font-family: 'Open Sans', sans-serif;
+
+}
+
+.extend-profile {
+
+    width: .85vw;
+    height: .85vw;
+
+    margin-top: .3vh;
+    margin-right: .2vh;
+
+}
+
+
+/*Content*/
+
+
+#welcome {
+
+    font-family: var(--content-font);
+    font-size: 2.7vw;
+
+}
+
+.content {
+
+    display: flex;
+
+    flex-direction: column;
+
+    margin-left: 21vw;
+    margin-top: 1%;
+
+    width: 73vw;
+
+}
+
+.search {
+
+    display: flex;
+
+    flex-direction: column;
+
+}
+
+.search img {
+
+    width: 1.3vw;
+    height: 1.3vw;
+
+    margin-top: 9.3vh;
+    margin-left: .65vw;
+
+    opacity: .4;
+
+    position: absolute;
+
+}
+
+.search-bar {
+
+    width: 14.5vw;
+    height: 5vh;
+
+    background-color: white;
+    border: .1vw solid rgb(210,210,210);
+
+    border-radius: .2vw;
+    padding-left: 2.5vw;
+
+    font-size: .9vw;
+
+    transition: .18s ease-out;
+
+}
+
+.search-bar::-webkit-input-placeholder {
+    color: black;
+    opacity: 0.2;
+}
+
+.search-bar:focus {
+
+    outline: none;
+
+    border: .1vw solid rgb(130, 133, 150);
+
+}
+
+.search-bar:focus > .search-bar img {
+
+    opacity: 1;
+
+}
+
+.search .title {
+    
+    margin-top: 4vh;
+    margin-bottom: 1.8vh;
+
+    font-size: .9vw;
+
+}
+
+.categories {
+
+    display: flex;
+
+    flex-direction: column;
+
+}
+
+.categories .title {
+
+    font-size: 1vw;
+
+    margin-top: 5vh;
+    margin-bottom: 2.8vh;
+
+}
+
+.categories .next-page {
+
+    width: 5.8vw;
+    height: 5vh;
+
+    margin-top: 3.5vh;
+
+    margin-left: 50.75vw;
+
+    font-size: 1vw;
+
+    border-radius: .25vw;
+
+    background-image: linear-gradient(rgb(72,98,243), rgb(62, 83, 206));
+    background-repeat: no-repeat;
+
+    border: none;
+    cursor: pointer;
+
+    overflow: hidden;
+    outline: none;
+
+    color: rgb(255,255,255);
+
+    transition: .1s ease-out;
+
+}
+
+.categories .next-page:active {
+
+    width: 5.4vw;
+    height: 4.8vh;
+
+    margin-left: 51vw;
+
+}
+
+.categories .grid {
+
+    display: flex;
+    flex-direction: row;
+
+}
+
+.category {
+
+    width: 13vw;
+    height: 35vh;
+
+    margin-right: 1.5vw;
+
+    border-radius: .4vw;
+    border: .12vw solid rgb(233, 233, 233);
+
+    display: flex;
+
+    flex-direction: column;
+    align-items: center;
+
+    background-repeat: no-repeat;
+
+    cursor: pointer;
+
+    overflow: hidden;
+    outline: none;
+
+    /*clip-path: inset(0 0 0 0);*/
+
+    background-color: white;
+
+    position: relative;
+
+}
+
+.category::before {
+
+    content: "";
+
+    width: 25vw;
+    height: 65vh;
+
+    position: absolute;
+
+    border-radius: 100%;
+
+    background: linear-gradient(20deg, rgb(51, 69, 170) 0%, rgb(66, 87, 201) 60%, rgb(255,255,255) 100%);
+
+    background-size: 100% 100%;
+    background-position: 0% 0%;
+
+    margin-right: 26vw;
+    margin-top: 35vh;
+
+    transition: .2s margin ease-in-out;
+
+    z-index: 1;
+
+}
+
+.category:hover::before {
+
+    margin: -20vh;
+
+}
+
+.category:hover > .category-title {
+
+    color: rgb(255,255,255);
+
+}
+
+.category-title {
+
+    font-family: var(--content-font);
+    font-size: 1vw;
+
+    position: absolute;
+
+    margin-top: 23vh;
+    z-index: 2;
+
+    transition: .2s color;
+
+}
+
+.category-icon {
+
+    width: 15vw;
+    height: 18vh;
+
+    object-fit: scale-down;
+
+    margin-top: 6vh;
+    z-index: 2;
+
+}
+
+.checkmark {
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    width: 1.3vw;
+    height: 1.3vw;
+
+    top: 1.2vw;
+    right: 1.2vw;
+
+    background-color: rgb(111, 235, 111);
+    border-radius: 100%;
+    
+    visibility: hidden;
+
+    z-index: 2;
+
+    position: absolute;
+
+}
+
+.checkmark img {
+
+    filter: brightness(0) invert(1);
+
+    width: 80%;
+    height: 80%;
+
+    margin-top: .05vw;
 
 }
