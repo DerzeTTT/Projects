@@ -5,6 +5,8 @@ class Artificial_Input:
         self.Holding = [];
         self.Reading = 0;
 
+        self.Production = False;
+
     def add_input(self, new_input, split_lines=True):
 
         Appending = None;
@@ -23,16 +25,21 @@ class Artificial_Input:
 
         self.Holding += Appending;
 
-        print(self.Holding);
-
     def read(self):
 
-        Returning = self.Holding[self.Reading];
-        self.Reading += 1;
+        if not self.Production:
 
-        return Returning;
+            Returning = self.Holding[self.Reading];
+            self.Reading += 1;
+
+            return Returning;
+        
+        else:
+
+            return input();
 
 Custom_Input = Artificial_Input();
 
-Custom_Input.add_input('''
-''')
+Custom_Input.Production = False;
+
+Custom_Input.add_input('''''')
